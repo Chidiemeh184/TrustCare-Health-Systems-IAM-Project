@@ -19,7 +19,7 @@
 
 This repository documents my comprehensive IAM & Active Directory implementation project for **TrustCare Health Systems**, a fictional healthcare organization used to demonstrate real-world IAM engineering capabilities. The project encompasses domain structure design, physical infrastructure planning, organizational unit architecture, security implementation, and advanced IAM platform integration.
 
-[![View Company Slides](https://img.shields.io/badge/📊_View_Company_Slides-Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/design/S2MGklpLjUfkLbXQ4UtUwJ/TrustCare-Health-Systems-Slides?node-id=1111-2011&t=TAIyGY7R0A4JFFdS-1)
+[![View Company Slides](https://img.shields.io/badge/📊_View_Company_Slides-Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/design/S2MGklpLjUfkLbXQ4UtUwJ/TrustCare-Health-Systems-Slides?node-id=1103-1218&t=2Tsikco2pbxR6ma3-1)
 
 
 **Project Duration:** [05/27/2025] - [08/27/2025]  
