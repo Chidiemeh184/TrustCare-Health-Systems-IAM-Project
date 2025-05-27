@@ -1,0 +1,328 @@
+# .gitignore for TrustCare AD Implementation Project
+# Optimized for Mac development environment
+
+# ================================
+# macOS System Files
+# ================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# ================================
+# IDE and Editor Files
+# ================================
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.swp
+*.swo
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ================================
+# VMware/Virtualization Files
+# ================================
+# VMware Workstation/Fusion
+*.vmdk
+*.vmx
+*.vmxf
+*.vmsd
+*.vmsn
+*.vmss
+*.nvram
+*.log
+vmware*.log
+
+# VirtualBox
+*.vdi
+*.vbox
+*.vbox-prev
+
+# Hyper-V
+*.vhd
+*.vhdx
+*.avhd
+*.avhdx
+
+# Vagrant
+.vagrant/
+*.box
+
+# ================================
+# Lab Environment Files
+# ================================
+# Virtual Machine snapshots and states
+snapshots/
+*.snapshot
+*.vmem
+*.vmx~
+
+# ISO files (can be large)
+*.iso
+
+# OVA/OVF files
+*.ova
+*.ovf
+
+# ================================
+# Sensitive Information
+# ================================
+# Configuration files with passwords
+*password*
+*secret*
+*credential*
+*private*
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# ================================
+# Documentation and Screenshots
+# ================================
+# Large screenshot files (keep smaller ones)
+screenshots/*.tiff
+screenshots/*.psd
+*.psd
+
+# Temporary documentation files
+~$*.docx
+~$*.xlsx
+~$*.pptx
+*.tmp
+
+# ================================
+# Logs and Temporary Files
+# ================================
+# Log files
+*.log
+logs/
+log/
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Temporary folders
+tmp/
+temp/
+cache/
+
+# ================================
+# Archive Files
+# ================================
+# Large archives (document smaller ones for demos)
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# ================================
+# PowerShell and Scripts
+# ================================
+# PowerShell execution policy bypass files
+*.ps1xml
+
+# PowerShell module cache
+PSReadLine/
+
+# ================================
+# Microsoft Office
+# ================================
+# Word temporary files
+~$*.doc*
+~$*.dot*
+
+# Excel temporary files
+~$*.xls*
+~$*.xlt*
+
+# PowerPoint temporary files
+~$*.ppt*
+~$*.pot*
+
+# Visio autosave files
+*.~vsd*
+
+# ================================
+# Network and Security Tools
+# ================================
+# Wireshark captures
+*.pcap
+*.pcapng
+
+# Nmap files
+*.nmap
+
+# Certificate files (keep templates)
+certificates/*.crt
+certificates/*.cer
+certificates/*.p7b
+
+# ================================
+# Database Files
+# ================================
+# SQLite
+*.sqlite
+*.db
+*.db3
+
+# SQL Server
+*.mdf
+*.ldf
+
+# ================================
+# Custom Project Ignores
+# ================================
+# Large demo files
+demo-files/*.exe
+demo-files/*.msi
+
+# Personal notes (keep templates)
+personal-notes/
+my-notes.md
+private-*/
+
+# Lab-specific ignores
+lab-configs/live/
+production-configs/
+real-credentials/
+
+# Test data with sensitive info
+test-data/sensitive/
+sample-data/real/
+
+# ================================
+# Node.js (if using any web tools)
+# ================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ================================
+# Python (if using Python scripts)
+# ================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# ================================
+# Ruby (if using Ruby scripts)
+# ================================
+*.gem
+*.rbc
+/.config
+/coverage/
+/InstalledFiles
+/pkg/
+/spec/reports/
+/spec/examples.txt
+/test/tmp/
+/test/version_tmp/
+/tmp/
+
+# ================================
+# Keep These Files (Exceptions)
+# ================================
+# Force include certain files that might be ignored
+!*.gitkeep
+!README.md
+!LICENSE
+!.gitignore
+
+# Keep important config templates
+!templates/
+!examples/
+!docs/
+
+# Keep small reference screenshots
+!screenshots/reference/
+!screenshots/examples/
+
+# ================================
+# Comments for Team Members
+# ================================
+# This .gitignore is optimized for:
+# - macOS development environment
+# - VMware/Hyper-V virtualization
+# - Active Directory lab scenarios
+# - Documentation with screenshots
+# - PowerShell scripting
+# - Multiple IDE support
+#
+# If you need to track a file that's being ignored,
+# use: git add -f filename
+#
+# To see what files are being ignored:
+# git status --ignored
