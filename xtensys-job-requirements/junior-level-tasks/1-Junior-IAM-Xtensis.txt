@@ -1,0 +1,49 @@
+Remote Junior IAM Engineer
+
+Job description
+About Us
+Xtensys, a recently established managed service provider, delivers cutting-edge technology to health systems, starting in NY and expanding beyond. Owned by two industry leaders focused on innovation in rural and community health, we are rapidly growing with several major initiatives underway.
+
+Job Summary
+We are looking for a motivated and detail-oriented Junior Directory Services and Identity Access Management (IAM) Specialist to join our IT team. This entry-level position will support the maintenance, monitoring, and administration of directory services and identity access management platforms. The ideal candidate will be eager to learn and grow within the identity governance and access management domain.
+
+Duties/Responsibilities:
+•	Assist in managing and maintaining Directory Services such as Active Directory (AD) or Azure AD, including user accounts, groups, and permissions.
+•	Support identity lifecycle management processes, including user provisioning, de-provisioning, and role assignments.
+•	Assist with the administration of IAM platforms and related tools such as Duo, Beyond Trust (Vendor portal, Bomgar)
+•	Provide first-level support for access-related issues, troubleshooting login problems, and resetting user credentials.
+•	Aid in enforcing security policies related to identity and access management, such as password policies and multi-factor authentication (MFA) enforcement.
+•	Monitor directory services for performance and security, reporting any anomalies to senior staff.
+•	Participate in system audits and generate reports as needed for compliance and security purposes.
+•	Collaborate with IT security and other teams to support identity and access governance initiatives.
+•	Stay current with emerging IAM technologies, security trends, and best practices through training and self-study.
+•	Other duties as requested.
+
+Required Skills/Abilities:
+Education 
+•	Associate's degree or Bachelor's degree in Information Technology, Computer Science, Cybersecurity, or a related field. Relevant experience may be considered in place of formal education.
+•	Entry-level certifications such as CompTIA Security+, Microsoft Certified: Identity and Access Administrator Associate, or similar IAM-related certifications are a plus but not required.
+
+Skills and Qualifications
+•	Basic understanding of directory services (Active Directory, Azure AD) and IAM principles.
+•	Familiarity with authentication protocols (e.g., SSO, MFA, SAML, OAuth) is preferred.
+•	Strong problem-solving and troubleshooting skills, especially with user access and identity management issues.
+•	Ability to present and explain complex technical topics, problems, and alternative solutions to others.
+•	Having at least a novice to intermediate skill level in a scripting language (e.g. PowerShell, Python, VBA, SQL, etc…)
+•	Proficient in supporting Windows based operating systems
+•	Interest in cybersecurity, access governance, and directory services.
+•	Ability to work well in a team environment and communicate effectively with senior staff.
+•	Eagerness to learn and adapt in a fast-paced IT environment.
+
+Experience:
+•	2-5 years of experience in IT support, system administration, or a related field.
+•	Exposure to directory services or identity access management platforms through coursework, internships, or job experience is preferred but not required.
+
+Physical Requirements:
+•	Must be able to work in an office setting an average of 8 hours per day. Must be able to work on a computer for prolonged periods. May require lifting and carrying light loads.
+Ithaca, NY
+Remote
+Full Time
+$65,000.00 - $75,000.00 per year
+About Xtensys Connected Health Solutions
+We are new but mighty. Xtensys, a recently established managed service provider, delivers cutting-edge technology to health systems, starting in NY and expanding beyond. Owned by two industry leaders focused on innovation in rural and community health, we are rapidly growing with several major initiatives underway. We seek talented professionals to join our team of 500 and support our exciting journey. We value people and are building a culture to match. If you're a collaborative, innovative, and strategic leader, we’d love to talk.
