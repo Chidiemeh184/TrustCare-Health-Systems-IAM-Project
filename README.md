@@ -123,13 +123,14 @@ Design and implementation of the Active Directory domain structure for TrustCare
 - [x] Migration planning documentation
 
 **Screenshots:** [X] screenshots attached 
- ./step-a-domain-structure/screenshots/1-Domain-Architecture/1.png
- ./step-a-domain-structure/screenshots/1-Domain-Architecture/2.png
- ./step-a-domain-structure/screenshots/4-Migration-Plan/5.png
- ./step-a-domain-structure/screenshots/4-Migration-Plan/1.png
- ./step-a-domain-structure/screenshots/4-Migration-Plan/2.png
- ./step-a-domain-structure/screenshots/4-Migration-Plan/3.png
- ./step-a-domain-structure/screenshots/4-Migration-Plan/4.png
+![Image](./step-a-domain-structure/screenshots/1-Domain-Architecture/1.png)
+![Image](./step-a-domain-structure/screenshots/1-Domain-Architecture/2.png)
+![Image](./step-a-domain-structure/screenshots/4-Migration-Plan/5.png)
+![Image](./step-a-domain-structure/screenshots/4-Migration-Plan/1.png)
+![Image](./step-a-domain-structure/screenshots/4-Migration-Plan/2.png)
+![Image](./step-a-domain-structure/screenshots/4-Migration-Plan/3.png)
+![Image](./step-a-domain-structure/screenshots/4-Migration-Plan/4.png)
+ 
 **Documentation:** [Link to detailed documentation](./step-a-domain-structure/README.md)
 
 ---
