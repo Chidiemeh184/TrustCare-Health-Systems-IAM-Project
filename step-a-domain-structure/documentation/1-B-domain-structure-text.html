@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Directory Domain Structure Evolution</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.5;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        h1, h2 {
+            color: #444;
+        }
+        
+        h1 {
+            border-bottom: 2px solid #444;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            margin-top: 30px;
+            background-color: #eaeaea;
+            padding: 5px 10px;
+            border-left: 5px solid #666;
+        }
+        
+        .section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .domain-name {
+            font-family: monospace;
+            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 3px;
+            margin-right: 10px;
+        }
+        
+        .green {
+            color: white;
+            background-color: #2c9e50;
+        }
+        
+        .blue {
+            color: white;
+            background-color: #2a7de1;
+        }
+        
+        .orange {
+            color: white;
+            background-color: #e67e22;
+        }
+        
+        .gray {
+            color: white;
+            background-color: #7f8c8d;
+        }
+        
+        .diagram {
+            font-family: monospace;
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #ddd;
+            white-space: pre;
+            overflow-x: auto;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .color-key {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .color-item {
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+        }
+        
+        .color-box {
+            width: 15px;
+            height: 15px;
+            margin-right: 5px;
+            border-radius: 3px;
+        }
+        
+        .divider {
+            height: 1px;
+            background-color: #ddd;
+            margin: 30px 0;
+        }
+        
+        .notes {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-left: 5px solid #7f8c8d;
+            margin: 20px 0;
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Active Directory Domain Structure Evolution</h1>
+    
+    <div class="color-key">
+        <div class="color-item">
+            <div class="color-box" style="background-color: #2c9e50;"></div>
+            <span>TrustCare</span>
+        </div>
+        <div class="color-item">
+            <div class="color-box" style="background-color: #2a7de1;"></div>
+            <span>HMI</span>
+        </div>
+        <div class="color-item">
+            <div class="color-box" style="background-color: #e67e22;"></div>
+            <span>SPHealth</span>
+        </div>
+        <div class="color-item">
+            <div class="color-box" style="background-color: #7f8c8d;"></div>
+            <span>General Notes/Connectors</span>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Phase 1: Before Transition / Initial State</h2>
+        
+        <p><strong>Primary Domain</strong></p>
+        <p><span class="domain-name green">trustcare.corp</span></p>
+        
+        <p><strong>Child Domains (Acquired Companies)</strong></p>
+        <p>
+            <span class="domain-name blue">hmi.com</span><br>
+            <span class="domain-name orange">sphealth.com</span>
+        </p>
+        
+        <p><strong>Schematic Representation:</strong></p>
+        <div class="diagram">                            <span class="green">trustcare.corp</span>
+                                /       \
+                               /         \
+                      <span class="blue">hmi.com</span>     <span class="orange">sphealth.com</span></div>
+    </div>
+    
+    <div class="section">
+        <h2>Phase 2: During Transition / Merger in Progress</h2>
+        
+        <p>Structure remains the same during the transition period.</p>
+        <p>The goal is to migrate resources and users from HMI and SPHealth into the TrustCare domain.</p>
+        
+        <p><strong>Schematic Representation (Same as Phase 1):</strong></p>
+        <div class="diagram">                            <span class="green">trustcare.corp</span>
+                                /       \
+                               /         \
+                      <span class="blue">hmi.com</span>     <span class="orange">sphealth.com</span></div>
+    </div>
+    
+    <div class="section">
+        <h2>Phase 3: After Transition / Desired State</h2>
+        
+        <p>All resources and users are now under the TrustCare domain.</p>
+        <p>HMI and SPHealth domains are decommissioned or no longer in active use.</p>
+        
+        <p><strong>Primary Domain</strong></p>
+        <p><span class="domain-name green">trustcare.corp</span></p>
+        
+        <p><strong>Schematic Representation:</strong></p>
+        <div class="diagram">                            <span class="green">trustcare.corp</span>
+                                   |
+                                   |
+            (All resources and users consolidated here)</div>
+    </div>
+    
+    <div class="notes">
+        <h3>Additional Notes:</h3>
+        <ul>
+            <li>This is a simplified representation.</li>
+            <li>OU (Organizational Unit) structure within trustcare.corp will be designed to further organize users, computers, and resources (e.g., by location, department).</li>
+            <li>Trust relationships might be used during the transition to allow access between domains, but the final state is a single domain.</li>
+        </ul>
+    </div>
+    
+    <div class="diagram" style="font-size: 12px;">
++--------------------------------------------------------------------------------------+
+|                                                                                      |
+|                      ACTIVE DIRECTORY DOMAIN CONSOLIDATION                           |
+|                                                                                      |
++--------------------------------------------------------------------------------------+
+
+PHASE 1: BEFORE
++----------------+        +----------------+        +----------------+
+|                |        |                |        |                |
+|   TrustCare    |        |      HMI       |        |   SPHealth     |
+|  trustcare.corp|        |    hmi.com     |        |  sphealth.com  |
+|                |        |                |        |                |
++----------------+        +----------------+        +----------------+
+      Separate                 Separate                 Separate
+
+PHASE 2: DURING
++-----------------------------------------------------------+
+|                       TrustCare                            |
+|                     trustcare.corp                         |
+|                                                           |
+|    +-----------------+         +----------------------+    |
+|    |                 |         |                      |    |
+|    |   Resources     |<------->|     Resources        |    |
+|    |   migrating     |         |     migrating        |    |
+|    |   from HMI      |         |     from SPHealth    |    |
+|    |                 |         |                      |    |
+|    +-----------------+         +----------------------+    |
+|                                                           |
++-----------------------------------------------------------+
+        ^                                 ^
+        |                                 |
+        |                                 |
++----------------+              +----------------+
+|                |              |                |
+|      HMI       |              |   SPHealth     |
+|    hmi.com     |              |  sphealth.com  |
+| Legacy systems |              | Legacy systems |
++----------------+              +----------------+
+
+PHASE 3: AFTER
++-----------------------------------------------------------+
+|                                                           |
+|                       TrustCare                            |
+|                     trustcare.corp                         |
+|                                                           |
+|    +-----------------+         +----------------------+    |
+|    |                 |         |                      |    |
+|    |   Resources     |         |     Resources        |    |
+|    |   from HMI      |         |     from SPHealth    |    |
+|    |   (integrated)  |         |     (integrated)     |    |
+|    |                 |         |                      |    |
+|    +-----------------+         +----------------------+    |
+|                                                           |
++-----------------------------------------------------------+
+    </div>
+</body>
+</html>

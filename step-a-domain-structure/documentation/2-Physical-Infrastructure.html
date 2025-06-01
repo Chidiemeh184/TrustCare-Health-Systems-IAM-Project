@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Directory Physical Infrastructure Design</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.5;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        h1, h2, h3 {
+            color: #444;
+        }
+        
+        h1 {
+            border-bottom: 2px solid #444;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            margin-top: 30px;
+            background-color: #eaeaea;
+            padding: 5px 10px;
+            border-left: 5px solid #666;
+        }
+        
+        h3 {
+            margin-top: 25px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        
+        .section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .location-item {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        
+        .location-name {
+            font-weight: bold;
+            font-size: 16px;
+            padding: 5px 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+            border-radius: 3px;
+        }
+        
+        .green {
+            color: white;
+            background-color: #2c9e50;
+        }
+        
+        .gray {
+            color: white;
+            background-color: #7f8c8d;
+        }
+        
+        .yellow {
+            color: black;
+            background-color: #f1c40f;
+        }
+        
+        .dc-list {
+            margin-left: 30px;
+        }
+        
+        .dc-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .dc-label {
+            display: inline-block;
+            font-family: monospace;
+            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 3px;
+            margin-right: 10px;
+            min-width: 80px;
+        }
+        
+        .dc-note {
+            font-style: italic;
+            color: #666;
+        }
+        
+        .color-key {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .color-item {
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+        }
+        
+        .color-box {
+            width: 15px;
+            height: 15px;
+            margin-right: 5px;
+            border-radius: 3px;
+        }
+        
+        .requirements {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 5px solid #2c9e50;
+            margin-bottom: 20px;
+        }
+        
+        .considerations {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-left: 5px solid #7f8c8d;
+            margin: 20px 0;
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 5px;
+        }
+        
+        .topology-diagram {
+            font-family: monospace;
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #ddd;
+            white-space: pre;
+            overflow-x: auto;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .divider {
+            height: 1px;
+            background-color: #ddd;
+            margin: 30px 0;
+        }
+        
+        .total {
+            font-weight: bold;
+            text-align: right;
+            margin-top: 30px;
+            font-size: 16px;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Active Directory Physical Infrastructure Design</h1>
+    
+    <div class="color-key">
+        <div class="color-item">
+            <div class="color-box" style="background-color: #2c9e50;"></div>
+            <span>TrustCare Locations</span>
+        </div>
+        <div class="color-item">
+            <div class="color-box" style="background-color: #7f8c8d;"></div>
+            <span>General Notes/Connectors</span>
+        </div>
+        <div class="color-item">
+            <div class="color-box" style="background-color: #f1c40f;"></div>
+            <span>Domain Controllers</span>
+        </div>
+    </div>
+    
+    <div class="requirements">
+        <h3>Requirements:</h3>
+        <ul>
+            <li>Minimum of 12 domain controllers across locations</li>
+            <li>Site-based replication topology</li>
+            <li>High availability for critical authentication services</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>Locations and Domain Controller Distribution</h2>
+        
+        <h3>Headquarters & Primary Distribution Center</h3>
+        <div class="location-item">
+            <span class="location-name green">Atlanta, GA (HQ/ATL-DC1)</span>
+            <div class="dc-list">
+                <div class="dc-item">
+                    <span class="dc-label yellow">DC01</span>
+                    <span class="dc-note">Primary Domain Controller</span>
+                </div>
+                <div class="dc-item">
+                    <span class="dc-label yellow">DC02</span>
+                    <span class="dc-note">Primary Backup Controller</span>
+                </div>
+                <div class="dc-item">
+                    <span class="dc-label yellow">DC03</span>
+                    <span class="dc-note">DR/Backup Controller</span>
+                </div>
+            </div>
+        </div>
+        
+        <h3>Regional Headquarters</h3>
+        <div class="location-item">
+            <span class="location-name green">Boston, MA (BOS)</span>
+            <div class="dc-list">
+                <div class="dc-item">
+                    <span class="dc-label yellow">DC04</span>
+                    <span class="dc-note">Northeast Regional DC</span>
+                </div>
+            </div>
+        </div>
+        <div class="location-item">
+            <span class="location-name green">Chicago, IL (CHI)</span>
+            <div class="dc-list">
+                <div class="dc-item">
+                    <span class="dc-label yellow">DC05</span>
+                    <span class="dc-note">Midwest Regional DC</span>
+                </div>
+            </div>
+        </div>
+        <div class="location-item">
+            <span class="location-name green">Los Angeles, CA (LA)</span>
+            <div class="dc-list">
+                <div class="dc-item">
+                    <span class="dc-label yellow">DC06</span>
+                    <span class="dc-note">West Coast Regional DC</span>
+                </div>
+            </div>
+        </div>
+        <div class="location-item">
+            <span class="location-name green">Dallas, TX (DAL)</span>
+            <div class="dc-list">
+                <div class="dc-item">
+                    <span class="dc-label yellow">DC07</span>
+                    <span class="dc-note">Southwest Regional DC</span>
+                </div>
+            </div>
+        </div>
+        
+        <h3>Distribution Centers</h3>
+        <div class="location-item">
+            <span class="location-name green">Phoenix, AZ (PHX-DC2)</span>
+            <div class="dc-list">
+                <div class="dc-item">
+                    <span class="dc-label yellow">DC08</span>
+                    <span class="dc-note">Secondary Distribution Center DC</span>
+                </div>
+            </div>
+        </div>
+        <div class="location-item">
+            <span class="location-name green">Nashville, TN (NSH-DR)</span>
+            <div class="dc-list">
+                <div class="dc-item">
+                    <span class="dc-label yellow">DC09</span>
+                    <span class="dc-note">Tertiary/Backup Distribution Center DC</span>
+                </div>
+            </div>
+        </div>
+        
+        <h3>Major Office Locations</h3>
+        <div class="location-item">
+            <span class="location-name green">New York, NY (NY)</span>
+            <div class="dc-list">
+                <div class="dc-item">
+                    <span class="dc-label yellow">DC10</span>
+                    <span class="dc-note">New York Office DC</span>
+                </div>
+            </div>
+        </div>
+        <div class="location-item">
+            <span class="location-name green">San Francisco, CA (SF)</span>
+            <div class="dc-list">
+                <div class="dc-item">
+                    <span class="dc-label yellow">DC11</span>
+                    <span class="dc-note">San Francisco Office DC</span>
+                </div>
+            </div>
+        </div>
+        <div class="location-item">
+            <span class="location-name green">Denver, CO (DEN)</span>
+            <div class="dc-list">
+                <div class="dc-item">
+                    <span class="dc-label yellow">DC12</span>
+                    <span class="dc-note">Denver Office DC</span>
+                </div>
+            </div>
+        </div>
+        <div class="location-item">
+            <span class="location-name green">Miami, FL (MIA)</span>
+            <div class="dc-list">
+                <div class="dc-item">
+                    <span class="dc-label yellow">DC13</span>
+                    <span class="dc-note">Miami Office DC</span>
+                </div>
+            </div>
+        </div>
+        <div class="location-item">
+            <span class="location-name green">Seattle, WA (SEA)</span>
+            <div class="dc-list">
+                <div class="dc-item">
+                    <span class="dc-label yellow">DC14</span>
+                    <span class="dc-note">Seattle Office DC</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="total">
+            Total Domain Controllers: 14 (Exceeds the minimum requirement of 12)
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Site Topology Configuration</h2>
+        <p><em>Illustrative - requires AD Sites &amp; Services configuration</em></p>
+        
+        <ul>
+            <li>Sites created for each location (e.g., "Atlanta-HQ", "Boston-RHQ")</li>
+            <li>Replication links configured to optimize traffic flow (e.g., Hub-and-Spoke, Ring)</li>
+            <li>Atlanta (HQ) acts as a potential hub site</li>
+            <li>Site links configured with appropriate costs and schedules to control replication</li>
+        </ul>
+        
+        <div class="topology-diagram">
+                  +----------------+
+                  |                |
+                  |  Atlanta (HQ)  |
+                  |  DC01,DC02,DC03|
+                  |                |
+                  +----------------+
+                          |
+         +----------------+----------------+----------------+
+         |                |                |                |
++----------------+ +----------------+ +----------------+ +----------------+
+|                | |                | |                | |                |
+|  Boston (BOS)  | |  Chicago (CHI) | |  Dallas (DAL)  | |  LA (LA)       |
+|     DC04       | |     DC05       | |     DC07       | |    DC06        |
+|                | |                | |                | |                |
++----------------+ +----------------+ +----------------+ +----------------+
+         |                                                        |
+         |                                                        |
++----------------+                                       +----------------+
+|                |                                       |                |
+|  New York (NY) |                                       | San Fran (SF)  |
+|     DC10       |                                       |     DC11       |
+|                |                                       |                |
++----------------+                                       +----------------+
+                                                                  |
+                                                                  |
+                                                         +----------------+
+                                                         |                |
+                                                         |  Seattle (SEA) |
+                                                         |     DC14       |
+                                                         |                |
+                                                         +----------------+
+         
++----------------+                  +----------------+                  +----------------+
+|                |                  |                |                  |                |
+|  Miami (MIA)   |                  | Nashville (NSH)|                  |  Denver (DEN)  |
+|     DC13       |------------------|     DC09       |------------------|     DC12       |
+|                |                  |                |                  |                |
++----------------+                  +----------------+                  +----------------+
+                                            |
+                                            |
+                                   +----------------+
+                                   |                |
+                                   | Phoenix (PHX)  |
+                                   |     DC08       |
+                                   |                |
+                                   +----------------+
+        </div>
+    </div>
+    
+    <div class="considerations">
+        <h3>High Availability Considerations:</h3>
+        <ul>
+            <li>Minimum of two DCs at major locations to prevent single point of failure</li>
+            <li>Redundant network connections</li>
+            <li>UPS and generator backups for critical sites</li>
+            <li>Read-Only Domain Controllers (RODCs) at smaller/less secure sites (if applicable - not explicitly shown here for simplicity)</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>Domain Controller Distribution Strategy</h2>
+        <ul>
+            <li><strong>HQ/Regional HQ:</strong> 2+ DCs for high availability and local authentication</li>
+            <li><strong>Distribution Centers:</strong> 1-2 DCs (depending on size/criticality)</li>
+            <li><strong>Major Offices:</strong> 1-2 DCs (depending on office size)</li>
+        </ul>
+        
+        <p>This distribution ensures that:</p>
+        <ul>
+            <li>Users have local authentication services at each site</li>
+            <li>Critical locations have redundancy</li>
+            <li>Network traffic is minimized by avoiding authentication across WAN links</li>
+            <li>The infrastructure can scale with the projected 25% growth over 3 years</li>
+        </ul>
+    </div>
+</body>
+</html>
