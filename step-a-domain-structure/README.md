@@ -132,33 +132,33 @@ Here I begin by configuring the first domain contoller at the Atlanta HQ-DC-01: 
 
 Step 1 - Setting up Atlanta VirtualBox
 
-![Image](/screenshots/1-Domain-Architecture/step-1-create-vm.png)
+![Image](screenshots/1-Domain-Architecture/step-1-create-vm.png)
 
 Step 2 - Install Active Directory 
 
-![Image](/screenshots/1-Domain-Architecture/step-2-Install-Active-Directory.png)
+![Image](screenshots/1-Domain-Architecture/step-2-Install-Active-Directory.png)
 
 Step 3 - Promote Atlanta to Domain Controller 
 
-![Image](/screenshots/1-Domain-Architecture/step-3-promote-Atlanta-to-DC.png)
+![Image](screenshots/1-Domain-Architecture/step-3-promote-Atlanta-to-DC.png)
 
 Step 4 - Setup DNS
 
-![Image](/screenshots/1-Domain-Architecture/step-4-Atlanta-DNS-GC-setup.png)
+![Image](screenshots/1-Domain-Architecture/step-4-Atlanta-DNS-GC-setup.png)
 
 Step 5 - Compete Atlanta HQ setup - HQ-DC-01
 
-![Image](/screenshots/1-Domain-Architecture/step-4-Atlanta-DNS-GC-setup.png)
+![Image](screenshots/1-Domain-Architecture/step-4-Atlanta-DNS-GC-setup.png)
 
 ---
 ### 🚧 Migraton Plan Documentation 
 
-![Image](/screenshots/4-Migration-Plan/phase-1.png)
+![Image](screenshots/4-Migration-Plan/phase-1.png)
 
 Phase 1 - Before Transition 
 During the first phase after aquisition there are 3 separate forests. All the employee account and resources are separated.
 
-![Image](/screenshots/4-Migration-Plan/phase-2.png)
+![Image](screenshots/4-Migration-Plan/phase-2.png)
 
 Phase 2 - Establish Forest Trust
 During phase 2, we can establish a two-way forest trust so that employees in HMI and SPHealth can access resources in TrustCare.
@@ -166,7 +166,7 @@ During phase 2, we can establish a two-way forest trust so that employees in HMI
 2. We will configure DNS so that the internal name is resolved to the external
 3. Employees can access resources in TrustCare 
 
-![Image](/screenshots/4-Migration-Plan/phase-3.png)
+![Image](screenshots/4-Migration-Plan/phase-3.png)
 
 Phase 3 - Migration to Child Domains
 Next we will create 2 new local domains under TrustCare forest to represent HMI and SPHealth. The structure remains the same during this transition period. The goal is to migrate resources and users from HMI and SPHealth into the TrustCare domain. The child domains are temporary and will later be decommission. The following scenario will take place: 
@@ -174,7 +174,7 @@ Next we will create 2 new local domains under TrustCare forest to represent HMI 
 2. This can be done in the weekend to prevent disruption 
 3. Employees have access to legacy and new resources
 
-![Image](/screenshots/4-Migration-Plan/phase-4.png)
+![Image](screenshots/4-Migration-Plan/phase-4.png)
 
 Phase 4 - Decomission original Forests 
 After all the employees and resources are migrated then the original forests are decommissioned. Additionally, users are migrated from the child domain to the parent. The following scenario will take place:
@@ -182,7 +182,7 @@ After all the employees and resources are migrated then the original forests are
 2. Plans to decommission the child domain will be announced this can happen over the weekend to prevent disruption
 3. On Monday employees can sign in with jane@trustcare.corp after child is decomissioned 
 
-![Image](/screenshots/4-Migration-Plan/phase-5.png)
+![Image](screenshots/4-Migration-Plan/phase-5.png)
 
 Phase 5 - Consolidated Phase 
 All employees and resources are now consolidated into the TrustCare domain
