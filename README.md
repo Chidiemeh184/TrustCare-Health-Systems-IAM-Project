@@ -78,8 +78,6 @@ TrustCare-Health-Systems-IAM-Project/
 ├── step-a-domain-structure/
 │   ├── README.md
 │   ├── screenshots/
-│   ├── configurations/
-│   └── documentation/
 ├── step-b-physical-infrastructure/
 │   ├── README.md
 │   ├── screenshots/
@@ -112,37 +110,27 @@ TrustCare-Health-Systems-IAM-Project/
 ## 🚀 Implementation Phases
 
 ### [Step A: Domain Structure Design](./step-a-domain-structure/)
-**Status:** ⏳ In Progress 
+**Status:** 🟢 Completed
 
 Design and implementation of the Active Directory domain structure for TrustCare Health Systems, including forest consolidation strategy for acquired companies.
 
 **Key Deliverables:**
 - [x] Domain architecture diagrams
-- [ ] Forest trust configuration
-- [ ] DNS structure implementation
+- [x] Forest trust configuration
+- [x] DNS structure implementation
 - [x] Migration planning documentation
-
-**Screenshots:** [X] screenshots attached 
-![Image](./step-a-domain-structure/screenshots/1-Domain-Architecture/1.png)
-![Image](./step-a-domain-structure/screenshots/1-Domain-Architecture/2.png)
-![Image](./step-a-domain-structure/screenshots/4-Migration-Plan/6.png)
-![Image](./step-a-domain-structure/screenshots/4-Migration-Plan/1.png)
-![Image](./step-a-domain-structure/screenshots/4-Migration-Plan/2.png)
-![Image](./step-a-domain-structure/screenshots/4-Migration-Plan/3.png)
-![Image](./step-a-domain-structure/screenshots/4-Migration-Plan/4.png)
-![Image](./step-a-domain-structure/screenshots/4-Migration-Plan/5.png)
  
 **Documentation:** [Link to detailed documentation](./step-a-domain-structure/README.md)
 
 ---
 
 ### [Step B: Physical Infrastructure](./step-b-physical-infrastructure/)
-**Status:** ❌ Not Started
+**Status:** ⏳ In Progress 
 
 Design and deployment of domain controllers across TrustCare's geographic locations with proper site topology and replication strategies.
 
 **Key Deliverables:**
-- [ ] 14 domain controllers across 12 locations
+- [x] 14 domain controllers across 12 locations
 - [ ] Site and services configuration
 - [ ] Replication topology optimization
 - [ ] High availability implementation
