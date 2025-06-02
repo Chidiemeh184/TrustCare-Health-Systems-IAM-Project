@@ -30,6 +30,10 @@
 
 For Domain - trustcare.corp, I need to setup the first Domain Controller in Atlanta HQ then install Windows Server 2022. After doing this I installed Active Directory and then promoted the server as Domain Controller. For regional stability, I will create additional domain controllers for Atlanta but this will be done in the next step.
 
+For more about the c ompany Background and Overview please see [company-background](./docs/company-background/Step-A.pdf) and for the figma slides -
+[![View Company Slides](https://img.shields.io/badge/📊_View_Company_Slides-Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/design/S2MGklpLjUfkLbXQ4UtUwJ/TrustCare-Health-Systems-Slides?node-id=1103-1218&t=2Tsikco2pbxR6ma3-1)
+
+
 ---
 ### 📁 Creating Atlanta HQ DC 
 Here are the steps Atlanta DC - HQ-DC-01

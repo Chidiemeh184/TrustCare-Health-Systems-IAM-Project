@@ -29,8 +29,11 @@ Here are the details of VirtualBox I Used and my Mac Mini configurations-
 1. Download VirtualBox
 2. Install 
 
-![Image](./docs/screenshots/vb-info.png)
+![Image](screenshots/vb-info.png)
 
 ---
 ### 🏢 Company Background and Overview 
 Please see [company-background](./docs/company-background/Step-A.pdf)
+
+[![View Company Slides](https://img.shields.io/badge/📊_View_Company_Slides-Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/design/S2MGklpLjUfkLbXQ4UtUwJ/TrustCare-Health-Systems-Slides?node-id=1103-1218&t=2Tsikco2pbxR6ma3-1)
+
