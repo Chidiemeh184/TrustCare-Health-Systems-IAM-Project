@@ -29,4 +29,4 @@ Here are the details of VirtualBox I Used and my Mac Mini configurations-
 1. Download VirtualBox
 2. Install 
 
-![Image](./step-a-domain-structure/screenshots/virtual-box-setup/virtualBox-info.png)
+![Image](../virtual-box-setup/virtualBox-info.png)
