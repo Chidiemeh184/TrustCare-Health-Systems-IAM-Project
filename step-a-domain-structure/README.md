@@ -16,12 +16,12 @@
 
 ---
 ### 🧠 Key Takeaways 
-1. We have setup the first Domain Controller inside the trustcare.corp by creating a new forest 
+1. I setup the first Domain Controller inside the trustcare.corp by creating a new forest 
 2. The forest relies on DNS to locate resources on the network. The naming system also helps Active Directory
-3. We can add to existing DC in forest when we setup additional regional DC's Eg Nashville, Chicago, Denver etc
+3. I can add to existing DC in forest when I setup additional regional DC's Eg Nashville, Chicago, Denver etc
 4. Two temporary child DC will be setup under trustcare.corp for phased migration 
 5. This will be done using the option "add a new domain to an existing forest"
-6. Under the tustcare.corp, from step 5, we can have 2 child domain for the aquisition - hmi.trustcare.corp and sphealth.trustcare.corp
+6. Under the tustcare.corp, from step 5, I can have 2 child domain for the aquisition - hmi.trustcare.corp and sphealth.trustcare.corp
 7. Global Catalog is light DC like phonebook to look up resources based on special attributes 
 8. The term "Active Directory" also referes to the other services & tool like ADFS, ADCS and ADRMS
 
@@ -58,8 +58,8 @@ The user account admin-cemeh is does not have admin privileges yet we need to us
 2. The password will be the same as admin-cemeh (Enterprise1.)
 3. Now we can elevate admin-cemeh using administrator account 
 4. Next select manage and promote to Domain Controller 
-5. We will see 3 options (will explain later) for now select Add a new forest, then enter “trustcare.corp”
-6. Make sure to select Forest functional level and check DNS and Global Catalog we will explain these 
+5. We will see 3 options (I, will explain later) for now select Add a new forest, then enter “trustcare.corp”
+6. Make sure to select Forest functional level and check DNS and Global Catalog I will explain these 
 7. Add a recovery Password - Recovery1. (Click Next)
 8. Skip creating DNS delegation
 9. Continue after NetBIOS appears
@@ -158,15 +158,15 @@ During the first phase after aquisition there are 3 separate forests. All the em
 ![Image](screenshots/4-Migration-Plan/phase-1.png)
 
 Phase 2 - Establish Forest Trust
-During phase 2, we can establish a two-way forest trust so that employees in HMI and SPHealth can access resources in TrustCare.
+During phase 2, I can establish a two-way forest trust so that employees in HMI and SPHealth can access resources in TrustCare. Athough this is beyond the scope of the project just showing my thinking process.
 1. Employees will have 2 accounts eg jane@hmi.com or trustcare\jane@hmi.local
-2. We will configure DNS so that the internal name is resolved to the external
+2. I will then configure DNS so that the internal name is resolved to the external
 3. Employees can access resources in TrustCare 
 
 ![Image](screenshots/4-Migration-Plan/phase-2.png)
 
 Phase 3 - Migration to Child Domains
-Next we will create 2 new local domains under TrustCare forest to represent HMI and SPHealth. The structure remains the same during this transition period. The goal is to migrate resources and users from HMI and SPHealth into the TrustCare domain. The child domains are temporary and will later be decommission. The following scenario will take place: 
+Next I will create 2 new local domains under TrustCare forest to represent HMI and SPHealth. The structure remains the same during this transition period. The goal is to migrate resources and users from HMI and SPHealth into the TrustCare domain. The child domains are temporary and will later be decommission. The following scenario will take place: 
 1. Employees can use new temporary account of the child domains Eg jane@hmi.trustcare.corp
 2. This can be done in the weekend to prevent disruption 
 3. Employees have access to legacy and new resources
