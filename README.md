@@ -132,10 +132,9 @@ Design and deployment of domain controllers across TrustCare's geographic locati
 **Key Deliverables:**
 - [x] 14 domain controllers across 12 locations
 - [ ] Site and services configuration
-- [ ] Replication topology optimization
-- [ ] High availability implementation
+- [x] Replication topology optimization
+- [x] High availability implementation
 
-**Screenshots:** [X] screenshots attached  
 **Documentation:** [Link to detailed documentation](./step-b-physical-infrastructure/README.md)
 
 ---
