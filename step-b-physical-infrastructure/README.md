@@ -2,10 +2,9 @@
 
 ---
 ### ⭐️ Objective 
-1. Create the first domain to represent trustcare.corp 
-2. Install Windows Server and AD
-3. Promote server to Domain Controller 
-4. Show Migration Plan Documentation 
+1. Minimum of 12 domain controllers across locations
+2. Site-based replication topology
+3. High availability for critical authentication services
 
 ---
 ### ✅ Key Deliverables:
@@ -131,6 +130,7 @@ GREEN Seattle, WA (SEA)
 
 # Total Domain Controllers: 14 (Meets the minimum requirement of 12)
 ```
+TrustCare Region showing 14 Domain Controllers 
 ![Image](screenshots/sites-and-service-config.png)
 
 ---
