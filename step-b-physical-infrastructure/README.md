@@ -133,6 +133,9 @@ GREEN Seattle, WA (SEA)
 TrustCare Region showing 14 Domain Controllers 
 ![Image](screenshots/sites-and-service-config.png)
 
+Assigning IP to 14 sites
+![Image](screenshots/sites-ip-assignment.png)
+
 ---
 ### 🏢 Site & Service Configuration 
  For the 14 regions, I created 14 unique IP address in VirtualBox. Then created 14 VM to represent these area. All location are promoted to DC and linked to the first DC. By doing this I actually discovered that there is no "one" DC per location. The Active Directory is distributed among the locations. For instance if an employee jane@truscare.corp who works in Colorado goes to Atlanta for regional meeting, she can still login at the HQ and use the credentials there, or any other location. It bewildered me because it works a little like git but I discovered it's actually RDP and was built before HTTP. So I will have to write an article on this. 
