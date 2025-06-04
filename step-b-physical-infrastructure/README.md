@@ -143,7 +143,7 @@ Assigning IP to 14 sites
 Virtual Box Setup
 ![Image](screenshots/VBOX-DC-LOCATIONS.png)
 
-Boston IP setup 
+Boston IP setup pointing to Atlanta
 ![Image](screenshots/BOS-DC-04-IP-Setup.png)
 
 Boston DC-04 Setup
