@@ -10,7 +10,7 @@
 ### ✅ Key Deliverables:
 Design and deployment of domain controllers across TrustCare's geographic locations with proper site topology and replication strategies.
 - [x] 14 domain controllers across 12 locations
-- [ ] Site and services configuration
+- [x] Site and services configuration
 - [x] Replication topology optimization
 - [x] High availability implementation
 
@@ -24,7 +24,7 @@ Design and deployment of domain controllers across TrustCare's geographic locati
 6. You can configure IP for each DC virtual machine in virtual box
 7. Replication is cruicail to ensire consistency of the AD - There is a lot that goes into this
 8. The site links are also a consideration on how the AD asks for information during replication 
-9. Oh and the the database for AD is also distributed 
+9. Oh and the database for AD is also distributed 
 10. Domain controller is just a machine running AD
 
 ---
@@ -138,10 +138,19 @@ TrustCare Region showing 14 Domain Controllers
  For the 14 regions, I created 14 unique IP address in VirtualBox. Then created 14 VM to represent these area. All location are promoted to DC and linked to the first DC. By doing this I actually discovered that there is no "one" DC per location. The Active Directory is distributed among the locations. For instance if an employee jane@truscare.corp who works in Colorado goes to Atlanta for regional meeting, she can still login at the HQ and use the credentials there, or any other location. It bewildered me because it works a little like git but I discovered it's actually RDP and was built before HTTP. So I will have to write an article on this. 
 
 Virtual Box Setup
-[] setup image 1
-[] setup image 2
-[] setup image 3
-[] setup image 4
+![Image](screenshots/VBOX-DC-LOCATIONS.png)
+
+Boston IP setup 
+![Image](screenshots/BOS-DC-04-IP-Setup.png)
+
+Boston DC-04 Setup
+![Image](screenshots/BOS-DC-04-Promote-Server.png)
+
+Boston Ping Atlanta HQ
+![Image](screenshots/BOS-DC-04-PING-01.png)
+
+All Locations DC Setup 
+![Image](screenshots/BOS-DC-04-Showing-others.png)
 
 ---
 ### 🏢 Replication Topology Optimization 

@@ -125,13 +125,13 @@ Design and implementation of the Active Directory domain structure for TrustCare
 ---
 
 ### [Step B: Physical Infrastructure](./step-b-physical-infrastructure/)
-**Status:** ⏳ In Progress 
+**Status:** 🟢 Completed 
 
 Design and deployment of domain controllers across TrustCare's geographic locations with proper site topology and replication strategies.
 
 **Key Deliverables:**
 - [x] 14 domain controllers across 12 locations
-- [ ] Site and services configuration
+- [x] Site and services configuration
 - [x] Replication topology optimization
 - [x] High availability implementation
 
@@ -140,7 +140,7 @@ Design and deployment of domain controllers across TrustCare's geographic locati
 ---
 
 ### [Step C: Organizational Unit Structure](./step-c-ou-structure/)
-**Status:** ❌ Not Started
+**Status:** ⏳ In Progress 
 
 Implementation of hierarchical OU structure supporting location-based, department-based, and resource-based organization with proper delegation of control.
 
