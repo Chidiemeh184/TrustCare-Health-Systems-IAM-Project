@@ -1,0 +1,48 @@
+<# 
+
+# TrustCare IT Request: "We need to move LA-DC-06 from temporary 
+Atlanta hosting to the new Los Angeles data center."
+
+Your Process:
+1. ✅ Moved DC to correct site (Los Angeles-LA)
+2. ✅ Verified replication is functioning
+3. ✅ Confirmed directory synchronization
+4. ✅ Validated services are operational
+
+Result: Los Angeles pharmacy staff can authenticate 
+locally instead of reaching back to Atlanta!
+
+#>
+
+# Force immediate replication test
+repadmin /syncall /AdeP
+
+# Test replication between active sites
+repadmin /replsummary
+repadmin /showrepl BOS-DC-04
+repadmin /bridgeheads
+
+# Press Ctrl+C to cancel the current command
+# Then run more targeted commands:
+
+# Check what's actually happening
+repadmin /replsummary
+
+# Check specific DCs that are online
+dcdiag /s:HQ-DC-01 /v
+dcdiag /s:BOS-DC-04 /v
+
+# Check which DCs are actually responding
+nltest /dclist:trustcare.corp
+
+# Check replication topology
+repadmin /bridgeheads
+
+# See which DCs are actually responding
+nltest /dclist:trustcare.corp
+dcdiag /s:CHI-DC-05 /test:connectivity
+
+# Verify Core Services are replicating 
+# Most important: Can users authenticate?
+nltest /server:BOS-DC-04 /trusted_domains
+# Check if replication is working for critical data

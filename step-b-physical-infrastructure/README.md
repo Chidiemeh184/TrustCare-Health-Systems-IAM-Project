@@ -156,7 +156,7 @@ All Locations DC Setup
 *UPDATE - I last minute discovered, while I was studying, this is not actually the Site implementation.
 So what was I doing here - I was setting up addtional DCs in Atlanta-HQ and renaming them to represent the sites. Later on I discovered inorder to create sites we need to use Active Directory Site & Services to creates the other sites. 
 Long story short, I did end up creating the sites, moved the local ones into the new sites. Then setup the subnets and configured site replication to update across all sites. Ran into several errors. And lots of patience, haha (like real world site migration downtime 2-3hrs). I gained an enterprise-level experience in site migration. What other way to learn than through errors, things breaking and being messy.
-See full details here: [Coming soon]
+See full details here: [Site-Replication](./documentation/site-migration.md)
 
 ![Image](screenshots/BOS-DC-04-Showing-others.png)
 
