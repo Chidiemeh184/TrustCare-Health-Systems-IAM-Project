@@ -57,10 +57,11 @@ Successful replication of Atlanta-HQ-01 in CHI-DC-05
 When I discovered the mistake I felt the need to delete all the VMs and start afresh. But I also had a thought of figuring out how to fix it as a learning approach. This led me to exploring Active Directory Sites & Services to create the actual sites representing the physical locations. This would also require me to move the sites from Atlanta to respective locations. I also learned we must configure subnets and do several replication attempts, as in, the real maintenance - had to wait for 3 hours to see replication. I think this approach of learning is much rewarding because I am breaking things and instead of starting from scratch or following tutorial to avoid error, I welcome it as an approach to learn more. 
 The great thing about this learning by recorrecting error experience is that I can now see my mistake with a new lens and perspective.
 
-Site Links Optimization Opportunities
+---
+### 🏢 Site Links Optimization Opportunities
 We can improve the site links that connects the sites together eg from Atlanta to Chicago. Currently we have a default link called DEFAULTIPSITLINK. So we can have several links based on compliance and cost reduction opportunity 
 
-Default Site Link
+**Default Site Link**
 
 ![Image](../screenshots/site-migration/6.png)
 
