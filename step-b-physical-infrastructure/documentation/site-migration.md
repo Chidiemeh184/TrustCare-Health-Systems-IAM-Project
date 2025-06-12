@@ -66,21 +66,21 @@ Default Site Link
 
 ---
 ### 🔨 Skills I acquired by doing this: 
-**Enterprise-Level Skills Demonstrated**
+**☑️ Enterprise-Level Skills Demonstrated**
 1. Site topology management
 2. Cross-site replication validation
 3. Directory service verification
 4. Professional testing methodology
 5. Disaster Recovery and Geographic expansion 
 
-**Technical Skills Learned** 
+**☑️ Technical Skills Learned** 
 1. Multi-site AD architecture
 2. DC placement strategies
 3. Replication troubleshooting
 4. Enterprise change validation
 5. Healthcare infrastructure management
 
-**Resume Skills**
+**☑️ Resume Skills**
 1. I managed enterprise Active Directory with 14+ domain controllers across multiple geographic sites
 2. I successfully performed site migrations with zero service disruption
 3. I was able to validate multi-site replication in healthcare compliance environment
