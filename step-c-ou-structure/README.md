@@ -2,20 +2,20 @@
 
 ---
 ### ⭐️ Objectives
-OU Structure  
+**OU Structure** 
 Design the OU structure of the organization while considering scalability for the following areas: 
 1. Location-based
 2. Department-based
 3. Resource type-based (servers, workstattion and users)
 
-Group Policy Requirements 
+**Group Policy Requirements** 
 1. Role-based access controls
 2. Enhanced security for PHI/PII handling workstations
 3. Strict password and account lockout policies
 4. Endpoint protection policies (To be covered in Day in Life Policies)
 
+**Authentication Requirements**
 (To be covered in Day in Life Policies)
-Authentication Requirements
 1. Multi-factor authentication for remote access 
 2. Smart card authentication for high-security roles (I may not be able to cover this but will substitute)
 3. Single sign-on capabilities 
@@ -148,8 +148,8 @@ BLUE Resources
 ### 🗂️ Group Policy Requirement 
 After creating OU structure to divide up things and responsibilities, we can now create several GPO based on the several OUs eg location, departments (or people), or the workstations. This helps to delegate control for each structure or division. Here’s a breakdown of how it helps in the following areas:
 
-1. **Multi-Tiered OU Hierarchy** - Although I kept the nested structure not too deep, but shallow at most 3 levels deep. This helps in management. Additionally this helps to have GPOs that can be placed at top level to force inheritance. This also works at the child level where either the child could force the GPO set at that level or inherit from the parent and so override the child rule. The multi-tiered OU allows for this. See screenshot ![Image](screenshots/2-Create-GPOs/1-Heirachical-OU-and-GPO-structure.png)
-2. **Delegation of control implementation** - The benefits of having the multi-layered structure is that it allows for delegation of control. For example in the pharmacy department I implemented several GPOs for Pharmacy retail: staff, manager, etc and also one for the managers Eg SG-PHARM-R-RxManagerPro. With the staffs assigned to the right OU and member of certain group we can have the Pharmacy managers administer the Pharmacy employees. This is clearly separated from other departments like Finance, Executive etc which all have their separate assigned responsibilities. This is where delegation of control shines. See screenshot 
+1. **Multi-Tiered OU Hierarchy** - Although I kept the nested structure not too deep, but shallow at most 3 levels deep. This helps in management. Additionally this helps to have GPOs that can be placed at top level to force inheritance. This also works at the child level where either the child could force the GPO set at that level or inherit from the parent and so override the child rule. The multi-tiered OU allows for this. See screenshot below ![Image](screenshots/2-Create-GPOs/1-Heirachical-OU-and-GPO-structure.png)
+2. **Delegation of control implementation** - The benefits of having the multi-layered structure is that it allows for delegation of control. For example in the pharmacy department I implemented several GPOs for Pharmacy retail: staff, manager, etc and also one for the managers Eg SG-PHARM-R-RxManagerPro. With the staffs assigned to the right OU and member of certain group we can have the Pharmacy managers administer the Pharmacy employees. This is clearly separated from other departments like Finance, Executive etc which all have their separate assigned responsibilities. This is where delegation of control shines. See screenshot below
 ![Image](screenshots/2-Create-GPOs/2-Delegation-of-control.png)
 3. **Security boundary establishment** - The hierarchy and delegation also help establish security boundaries. In addition using GPO, in the pharmacy department, can also help establish who can read or write access to certain shared directories and files. I’ll discuss more about this in the (Day in Life tasks I - establishing read write access for shared resources [Link]). 
 ![Image](screenshots/2-Create-GPOs/3-Security-boundary-establishment.png)
@@ -226,13 +226,13 @@ New-GPO -Name "TrustCare-HIPAA-Password-Policy" -Comment "HIPAA compliant passwo
 
 ---
 ### 🔑 Implemented Password & Account lockout Policies 
-![Image](screenshots/2-Create-GPOs/4-Password-and-account-lockout-policies.png)
+![Image](screenshots/2-Create-GPOs/4-Password-and-account-lockout-policies-2.png)
 
 ---
 ### 🔑 Screen Showing policies on DCs 
 ![Image](screenshots/2-Create-GPOs/5-Workstattion-and-all-policies.png)
 
 ---
-### 🚪 Client maching setup (Discussed more in Day in Life Tasks 1) 
+### 🚪 Client machine setup (Discussed more in Day in Life Tasks 1) 
 ![Image](screenshots/2-Create-GPOs/6-Client-Machine-Setup-Finance-Machines.png)
 
